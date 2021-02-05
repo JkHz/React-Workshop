@@ -1,8 +1,11 @@
-//TODO
+import React from 'react';
 
-{/* <div class = "listItem" id = {id}>
-  <h4>Drink Name</h4>
-  <div class = "imgDiv">
-    <img src = {img source}/>
+var ListItem = props => (
+  <div onClick = {() => {props.handleFavoritesClick(props.listItem)}} className = 'listItem' id = {props.listItem.idDrink}>
+    <h4>{props.listItem.strDrink}</h4>
+    <div className = 'imgDiv'>
+      <img src = {props.listItem.strDrinkThumb}/>
+    </div>
   </div>
-</div> */}
+)
+export default ListItem;
